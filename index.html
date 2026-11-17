@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Number Guessing Game</h1>
+  <div>Time: <span id="clock"></span> <button type="button" id="muteBtn" aria-pressed="false">Sound: on</button></div>
+</header>
+<nav><a href="memory.html">Play the Memory Matching Game &rarr;</a></nav>
+
+<main class="panel">
+  <p>I'm thinking of a whole number from <strong>1 to 100</strong>. Can you find it?</p>
+  <form id="guessForm" novalidate>
+    <label for="guessInput">Your guess</label>
+    <input id="guessInput" type="text" inputmode="numeric" autocomplete="off" aria-describedby="message">
+    <button type="submit">Guess</button>
+  </form>
+  <p id="remaining" aria-live="polite"></p>
+  <p id="message" role="status"></p>
+  <p id="difficulty"></p>
+  <h2>This round's guesses</h2>
+  <ol id="history"></ol>
+</main>
+
+<script src="common.js"></script>
+<script src="guess.js"></script>
+</body>
+</html>
